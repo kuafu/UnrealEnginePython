@@ -42,7 +42,8 @@ public class UnrealEnginePython : ModuleRules
             {
                 "Core",
                 "Sockets",
-                "Networking"
+                "Networking",
+				"LevelEditor"
 				// ... add other public dependencies that you statically link with here ...
 			}
             );

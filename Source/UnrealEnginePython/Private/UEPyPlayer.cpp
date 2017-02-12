@@ -59,7 +59,7 @@ PyObject *py_ue_get_num_players(ue_PyUObject *self, PyObject * args) {
 	if (!world)
 		return PyErr_Format(PyExc_Exception, "unable to retrieve UWorld from uobject");
 
-	AGameMode *game_mode = world->GetAuthGameMode();
+	AGameMode *game_mode = (AGameMode *)world->GetAuthGameMode();
 	if (!game_mode)
 		return PyErr_Format(PyExc_Exception, "unable to retrieve GameMode from world");
 
@@ -74,7 +74,7 @@ PyObject *py_ue_get_num_spectators(ue_PyUObject *self, PyObject * args) {
 	if (!world)
 		return PyErr_Format(PyExc_Exception, "unable to retrieve UWorld from uobject");
 
-	AGameMode *game_mode = world->GetAuthGameMode();
+	AGameMode *game_mode = (AGameMode *)world->GetAuthGameMode();
 	if (!game_mode)
 		return PyErr_Format(PyExc_Exception, "unable to retrieve GameMode from world");
 
